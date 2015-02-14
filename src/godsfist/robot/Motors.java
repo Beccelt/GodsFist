@@ -33,6 +33,9 @@ public class Motors {
 	public static final Talon rollerLeftSC, rollerRightSC;
 
 	// INITIALIZATIONS Final
+	public	Joystick driver = new Joystick(DRIVER_JOYSTICK_SLOT);
+	public	Joystick operator = new Joystick(OPERATOR_JOYSTICK_SLOT);
+	
 	static {
 		// Initialize Drive Train
 		frontLeftSC = new CANTalon(FRONT_LEFT_SC_PORT);
@@ -52,7 +55,5 @@ public class Motors {
 		rollerRightSC = new Talon(RIGHT_ROLLER_SC_PORT);
 
 		// Initialize Controllers
-		Joystick driver = new Joystick(DRIVER_JOYSTICK_SLOT);
-		Joystick operator = new Joystick(OPERATOR_JOYSTICK_SLOT);
 	}
 }
